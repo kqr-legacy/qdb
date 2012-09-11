@@ -1,0 +1,13 @@
+
+<?php
+$dbhost = 'localhost';
+$dbname = 'quote_database'
+$dbuser = 'myname';
+$dbpass = 'password';
+
+$addpasswd = 'password to add quotes';
+
+$conn = mysql_connect($dbhost, $dbuser, $dbpass) or die('Could not connect to SQL database.');
+mysql_select_db($dbname, $conn) or die(mysql_error());
+?>
+

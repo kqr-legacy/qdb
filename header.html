@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/main.css" />
+		<meta charset="utf-8">
+		<title>qdb</title>
+		<meta name="robots" content="noindex,nofollow" />
+		<script type="text/javascript">
+			function upvote(hash) {
+				//yo ajax man
+				voterequest = new XMLHttpRequest();
+
+				voterequest.onreadystatechange = function() {
+					if (voterequest.readyState == 4 && voterequest.status == 200) {
+						document.getElementById(hash + "_score").innerHTML =
+							voterequest.responseText;
+					}
+				}
+
+				voterequest.open("GET", "/upvote.php?hash=" + hash, true);
+				voterequest.send();
+			}
+		</script>
+	</head>
+
+	<body>
+		<a id="top"></a>
+		<header>
+			<h1>qdb</h1>
+			<nav>
+				<ul>
+					<li><a href="/latest">senaste</a></li>
+					<li><a href="/highest">topp</a></li>
+					<li><a href="/search">sök</a></li>
+					<li><a href="/random">slumpa</a></li>
+					<li><a href="/add">lägg till</a></li>
+				</ul>
+			</nav>
+		</header>
+
+
