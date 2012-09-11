@@ -50,7 +50,7 @@ if ($action=="latest") {
 
 else if ($action=="single") {
 	if (isset($_GET['hash'])) {
-		if (isset($_GET['delete']) && $_GET['delete'] == 'kossvalpa93') {
+		if (isset($_GET['delete']) && $_GET['delete'] == $delpasswd) {
                		$hash = $_GET['hash'];
 			mysql_query("DELETE FROM qdb_quotes WHERE hash='$hash' LIMIT 1;");
 			echo '<p>Citatet borttaget.</p>';

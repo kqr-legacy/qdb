@@ -6,6 +6,7 @@ $dbuser = 'myname';
 $dbpass = 'password';
 
 $addpasswd = 'password to add quotes';
+$delpasswd = 'password to remove quotes';
 
 $conn = mysql_connect($dbhost, $dbuser, $dbpass) or die('Could not connect to SQL database.');
 mysql_select_db($dbname, $conn) or die(mysql_error());
