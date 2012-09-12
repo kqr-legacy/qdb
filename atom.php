@@ -37,7 +37,7 @@ while ($row = mysql_fetch_array($result)) {
 		$quote = preg_split('/\n/', $quote);
 		foreach($quote as $line) {
 			$line = htmlentities(trim($line) . "<br />", ENT_COMPAT, 'UTF-8');
-			$line = preg_replace("@(https?://([-\w\.]+)+(:\d+)?(/([-\w/_\.]*(\?\S+)?)?)?)@", "<a href=\"$0\" target=\"_BLANK\">$0</a>", $line);
+			// $line = preg_replace("@(https?://([-\w\.]+)+(:\d+)?(/([-\w/_\.]*(\?\S+)?)?)?)@", "<a href=\"$0\" target=\"_BLANK\">$0</a>", $line);
 			$content .= "		$line\n";
 		}
 
