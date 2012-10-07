@@ -13,7 +13,7 @@ if (isset($_POST['quote']) && isset($_POST['password'])) {
 		exit;
 	}
 
-	if ($password != $addpasswd) 
+	if ($password != $addpasswd) {
                 header('Location: /add/password');
                 exit;
 	}
